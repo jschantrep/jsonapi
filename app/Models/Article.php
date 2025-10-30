@@ -31,7 +31,7 @@ class Article extends Model
     protected function casts(): array
     {
         return [
-            'id' => 'integer',
+            'id' => 'string',
             'category_id' => 'integer',
             'user_id' => 'integer',
         ];
