@@ -5,10 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Builder;
+
+
 
 class Article extends Model
 {
     use HasFactory;
+    use HasSorts;
+
+    public $allowedSorts = ['title', 'content', 'slug'];
+
 
     /**
      * The attributes that are mass assignable.
@@ -46,4 +54,7 @@ class Article extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    
+
 }

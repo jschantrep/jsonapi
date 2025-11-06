@@ -85,7 +85,7 @@ class ListArticleTest extends TestCase
                 ],
             ],
             'meta' => [
-                'articles_count' => 3 
+                'articles_count' => 3
             ]
         ]);
     }
